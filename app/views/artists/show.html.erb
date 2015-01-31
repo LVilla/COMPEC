@@ -1,0 +1,22 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @artist.nombre %>
+</p>
+ 
+<p>
+  <strong>Apellido:</strong>
+  <%= @artist.apellido %>
+</p>
+
+<p>
+  <strong>Lugar de Nacimiento:</strong>
+  <%= @artist.lugar_nacimiento %>
+</p>
+
+<p>
+  <strong>Fecha de Nacimiento:</strong>
+  <%= @artist.fecha_nacimiento %>
+</p>
+
+<%= link_to 'Editar', edit_artist_path(@artist) %> |
+<%= link_to 'Atrás', artists_path %>

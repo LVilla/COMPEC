@@ -1,0 +1,26 @@
+<%= link_to 'Nuevo Compositor', new_composer_path %>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Lugar de Nacimiento</th>
+    <th>Fecha de Nacimiento</th>
+    <th colspan="2"></th>
+    
+  </tr>
+ 
+  <% @composers.each do |composer| %>
+    <tr>
+      <td><%= composer.nombre %></td>
+      <td><%= composer.apellido %></td>
+      <td><%= composer.lugar_nacimiento %></td>
+      <td><%= composer.fecha_nacimiento %></td>
+      <td><%= link_to 'Mostrar', composer_path(composer) %></td>
+      <td><%= link_to 'Editar', edit_composer_path(composer) %></td>
+      <td><%= link_to 'Eliminar', composer_path(composer), 
+          method: :delete, 
+          data: { confirm: 'Realmente Desea Borrarlo ?'}%></td>
+    </tr>
+  <% end %>
+</table>

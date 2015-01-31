@@ -1,0 +1,22 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @composer.nombre %>
+</p>
+ 
+<p>
+  <strong>Apellido:</strong>
+  <%= @composer.apellido %>
+</p>
+
+<p>
+  <strong>Lugar de Nacimiento:</strong>
+  <%= @composer.lugar_nacimiento %>
+</p>
+
+<p>
+  <strong>Fecha de Nacimiento:</strong>
+  <%= @composer.fecha_nacimiento %>
+</p>
+
+<%= link_to 'Editar', edit_composer_path(@composer) %> |
+<%= link_to 'Atrás', composers_path %>

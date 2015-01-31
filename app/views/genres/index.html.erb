@@ -1,0 +1,20 @@
+<%= link_to 'Nuevo Genero', new_genre_path %>
+
+<table>
+  <tr>
+    <th>Genero</th>
+    <th colspan="2"></th>
+    
+  </tr>
+ 
+  <% @genres.each do |genre| %>
+    <tr>
+      <td><%= genre.genero %></td>
+      <td><%= link_to 'Mostrar', genre_path(genre) %></td>
+      <td><%= link_to 'Editar', edit_genre_path(genre) %></td>
+      <td><%= link_to 'Eliminar', genre_path(genre), 
+          method: :delete, 
+          data: { confirm: 'Realmente Desea Borrarlo ?'}%></td>
+    </tr>
+  <% end %>
+</table>

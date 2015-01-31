@@ -1,0 +1,26 @@
+<%= link_to 'Nuevo Artista', new_artist_path %>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Lugar de Nacimiento</th>
+    <th>Fecha de Nacimiento</th>
+    <th colspan="2"></th>
+    
+  </tr>
+ 
+  <% @artists.each do |artist| %>
+    <tr>
+      <td><%= artist.nombre %></td>
+      <td><%= artist.apellido %></td>
+      <td><%= artist.lugar_nacimiento %></td>
+      <td><%= artist.fecha_nacimiento %></td>
+      <td><%= link_to 'Mostrar', artist_path(artist) %></td>
+      <td><%= link_to 'Editar', edit_artist_path(artist) %></td>
+      <td><%= link_to 'Eliminar', artist_path(artist), 
+          method: :delete, 
+          data: { confirm: 'Realmente Desea Borrarlo ?'}%></td>
+    </tr>
+  <% end %>
+</table>

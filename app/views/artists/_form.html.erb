@@ -1,0 +1,41 @@
+<%= form_for @artist do |f| %>
+ 
+  <% if @artist.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@artist.errors.count, "error") %> prohibited
+        this artist from being saved:
+      </h2>
+      <ul>
+        <% @artist.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </p>
+ 
+  <p>
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido %>
+  </p>
+  
+  <p>
+    <%= f.label :lugar_nacimiento %><br>
+    <%= f.text_field :lugar_nacimiento %>
+  </p>
+ 
+ <p>
+    <%= f.label :fecha_nacimiento %><br>
+    <%= f.text_field :fecha_nacimiento %>
+  </p>
+
+  <p>
+    <%= f.submit 'Guardar'%>
+  </p>
+ 
+<% end %>

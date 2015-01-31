@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<div id = "contenedor">	
+		<header>
+			<section id = "logo">
+				<section>
+					<%= image_tag "Logo.png" %>
+				</section>
+				<section>
+					Compositores <br> Ecuatorianos
+				</section>
+			</section>
+			<nav id = "menu">
+				<ul>
+					<li><%= link_to 'Artistas', controller: 'artists' %> </li>
+					<li><%= link_to 'Compositores', controller: 'composers' %> </li>
+					<li><%= link_to 'Canciones', controller: 'composers' %> </li>
+				</ul>
+			</nav>	
+		</header>
+		<section id = "contenido">
+				<%= yield %>
+		</section>
+		<footer>
+			@2014 by Luis Tenesaca y Bryan Quezada. Created with Ruby on Rails
+		</footer>
+	</div>
+</body>
+</body>
+</html>
+<h1>Bienvenidos a COMPEC</h1>
+<%= link_to 'Artistas', controller: 'artists' %>
+<%= link_to 'Compositores', controller: 'composers' %>
+<%= link_to 'Canciones', controller: 'composers' %>
+<%= link_to 'Videos', controller: 'composers'%>
